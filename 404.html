@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="cn">
-  <head>
+<head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,9 +45,10 @@
 
 
 
-  <body class="">
-    <div class="wrapper">
-        <nav class="navbar">
+
+<body class="">
+  <div class="wrapper">
+    <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
         	<a href="https://lovu.top">晗月一梦</a>
@@ -95,9 +96,9 @@
     </div>
 </nav>
 
-    	 <main class="main">
-          <div class="container">
-      		
+    <main class="main">
+      <div class="container">
+        
  <div class="notfound">
         <h1 class="error-emoji"></h1>
 		  <p class="error-text">/* 404 page not found. */</p>
@@ -113,9 +114,9 @@
   errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
 </script>
 
-          </div>
-		   </main>
-      <footer class="footer">
+      </div>
+    </main>
+    <footer class="footer">
     <div class="copyright">
         &copy;
         
@@ -148,6 +149,23 @@
 
 
 
-     </div>
-  </body>
+  </div>
+  <link rel="stylesheet" href="css/APlayer.min.css">
+  <div id="player"></div>
+  <script src="js/APlayer.min.js"></script>
+</body>
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('player'),
+    fixed: true,
+    autoplay: true,
+    audio: [{
+      name: '一生所爱',
+      artist: '卢冠廷 、莫文蔚',
+      url: 'music/一生所爱 - 卢冠廷 _ 莫文蔚.flac',
+      cover: 'music/cover.jpg',
+    }]
+  });
+</script>
+
 </html>
