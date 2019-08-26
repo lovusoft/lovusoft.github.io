@@ -42,10 +42,10 @@ services:
 
 &lt;ul&gt;
 &lt;li&gt;部署 : &lt;code&gt;docker-compose up -d&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;启动 : &lt;code&gt;docker-compose start&lt;/code&gt; ***&lt;/li&gt;
-&lt;li&gt;停止 : &lt;code&gt;docker-compose stop&lt;/code&gt;***&lt;/li&gt;
-&lt;li&gt;重启 : &lt;code&gt;docker-compose restart&lt;/code&gt;***&lt;/li&gt;
-&lt;li&gt;删除 : &lt;code&gt;docker stop  &amp;amp;&amp;amp; docker rm&lt;/code&gt; ***&lt;/li&gt;
+&lt;li&gt;启动 : &lt;code&gt;docker-compose start ***&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;停止 : &lt;code&gt;docker-compose stop ***&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;重启 : &lt;code&gt;docker-compose restart ***&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除 : &lt;code&gt;docker stop  &amp;amp;&amp;amp; docker rm ***&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;更新 : &lt;code&gt;docker-compose pull &amp;amp;&amp;amp; docker-compose up -d&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
