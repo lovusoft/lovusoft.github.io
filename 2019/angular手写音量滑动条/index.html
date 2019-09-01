@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://lovu.top/2019/%E5%8A%A8%E5%BF%83%E5%BC%A6-%E4%B8%80/" />
+  
+  <link rel="canonical" href="https://lovu.top/2019/angular%E6%89%8B%E5%86%99%E9%9F%B3%E9%87%8F%E6%BB%91%E5%8A%A8%E6%9D%A1/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Angular手写音量滑动条 | 晗月一梦
+       
+  </title>
+  <meta name="title" content="Angular手写音量滑动条 | 晗月一梦">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Angular手写音量滑动条"/>
+<meta name="twitter:description" content="最终效果 HTML: &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;30&quot; [(ngModel)]=&quot;sound&quot; [ngStyle]=&quot;{&#39;background-size&#39;: process}&quot; /&gt; &lt;!--ngModel绑定当前数值到sound--&gt; &lt;!--ngStyle从ts获取当前滚动进"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Angular手写音量滑动条",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/lovu.top\/2019\/angular%E6%89%8B%E5%86%99%E9%9F%B3%E9%87%8F%E6%BB%91%E5%8A%A8%E6%9D%A1\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/lovu.top\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  "keywords": "Angular, CSS, HTML, Typescript",
+  "wordcount":  207 ,
+  "url": "https:\/\/lovu.top\/2019\/angular%E6%89%8B%E5%86%99%E9%9F%B3%E9%87%8F%E6%BB%91%E5%8A%A8%E6%9D%A1\/",
+  "datePublished": "2019-09-02T00:47:10\x2b08:00",
+  "dateModified": "2019-09-02T00:47:10\x2b08:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "晗月",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/lovu.top\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "晗月"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+
+<body class="">
+  <div class="wrapper">
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://lovu.top">晗月一梦</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博文</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/index.xml" title="">RSS</a>
+                
+                <a class="menu-item" href="/about" title="">关于</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://lovu.top">晗月一梦</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博文</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/index.xml" title="">RSS</a>
+                
+                <a class="menu-item" href="/about" title="">关于</a>
+                
+        </div>
+    </div>
+</nav>
+
+    <main class="main">
+      <div class="container">
+        
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Angular手写音量滑动条</h1>
+        <div class="post-meta">
+            Written by <a href="https://lovu.top"
+                rel="author">晗月</a>
+            with ♥
+            <span class="post-time">
+                on <time
+                    datetime=2019-09-02>2 September 2019</time>
+            </span>
+            in
+            <i class="iconfont icon-folder"></i>
+            <span class="post-category">
+                <a href="https://lovu.top/categories/%E7%A0%81%E9%97%B4%E5%B0%8F%E8%AE%B0/"> 码间小记 </a>
+                
+            </span>
+            <i class="iconfont icon-timer"></i>
+            1 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+        
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+
+<h4 id="最终效果">最终效果</h4>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2019/09/02/kQR9LyftmZGUBDV.gif" alt="最终效果演示.gif" class="lazyload"><figcaption class="image-caption">最终效果演示.gif</figcaption></figure></p>
+
+<h4 id="html">HTML:</h4>
+
+<pre><code class="language-HTML">&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;30&quot; [(ngModel)]=&quot;sound&quot; [ngStyle]=&quot;{'background-size': process}&quot; /&gt;
+&lt;!--ngModel绑定当前数值到sound--&gt;
+&lt;!--ngStyle从ts获取当前滚动进度，设置对应的背景颜色--&gt;
+</code></pre>
+
+<h4 id="scss">SCSS:</h4>
+
+<pre><code class="language-scss">  .sound {
+      white-space: nowrap;
+
+      input {
+        margin-left: 6px;
+
+        &amp;[type=&quot;range&quot;] {
+          appearance: none;		//清除默认样式
+          background: linear-gradient(#d33a31, #d33a31) no-repeat, #f5f5f5;
+          //linear-gradient设置滑动进度前后颜色
+          height: 2px;
+          position: relative;
+          bottom: 8.5px;
+          border: none;
+            
+		  //设置滚动条上按钮样式
+          &amp;::-webkit-slider-thumb {
+            appearance: none;
+            cursor: pointer;
+            position: relative;
+            box-sizing: border-box;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d33a31;
+          }
+
+        }
+      }
+    }
+</code></pre>
+
+<h4 id="typescript">Typescript:</h4>
+
+<pre><code class="language-typescript">sound = 20; 
+//与Vue计算属性相似
+get process() {
+    return this.sound + '% 100%';
+  }
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+        
+        <p class="copyright-item">
+            <span>作者:</span>
+            <span>晗月 </span>
+        </p>
+        
+
+        <p class="copyright-item">
+            <span>字数:</span>
+            <span>207</span>
+        </p>
+
+        <p class="copyright-item">
+            
+            <span>分享:</span>
+            <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2flovu.top%2f2019%2fangular%25E6%2589%258B%25E5%2586%2599%25E9%259F%25B3%25E9%2587%258F%25E6%25BB%2591%25E5%258A%25A8%25E6%259D%25A1%2f&amp;text=Angular%e6%89%8b%e5%86%99%e9%9f%b3%e9%87%8f%e6%bb%91%e5%8a%a8%e6%9d%a1&amp;via=xxxx" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flovu.top%2f2019%2fangular%25E6%2589%258B%25E5%2586%2599%25E9%259F%25B3%25E9%2587%258F%25E6%25BB%2591%25E5%258A%25A8%25E6%259D%25A1%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+        <a href="//reddit.com/submit?url=https%3a%2f%2flovu.top%2f2019%2fangular%25E6%2589%258B%25E5%2586%2599%25E9%259F%25B3%25E9%2587%258F%25E6%25BB%2591%25E5%258A%25A8%25E6%259D%25A1%2f&amp;title=Angular%e6%89%8b%e5%86%99%e9%9f%b3%e9%87%8f%e6%bb%91%e5%8a%a8%e6%9d%a1" target="_blank" title="Share on Reddit">
+          <i class="iconfont icon-reddit"></i>
+        </a>
+        
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2flovu.top%2f2019%2fangular%25E6%2589%258B%25E5%2586%2599%25E9%259F%25B3%25E9%2587%258F%25E6%25BB%2591%25E5%258A%25A8%25E6%259D%25A1%2f&amp;title=Angular%e6%89%8b%e5%86%99%e9%9f%b3%e9%87%8f%e6%bb%91%e5%8a%a8%e6%9d%a1" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2flovu.top%2f2019%2fangular%25E6%2589%258B%25E5%2586%2599%25E9%259F%25B3%25E9%2587%258F%25E6%25BB%2591%25E5%258A%25A8%25E6%259D%25A1%2f&amp;title=Angular%e6%89%8b%e5%86%99%e9%9f%b3%e9%87%8f%e6%bb%91%e5%8a%a8%e6%9d%a1" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2flovu.top%2f2019%2fangular%25E6%2589%258B%25E5%2586%2599%25E9%259F%25B3%25E9%2587%258F%25E6%25BB%2591%25E5%258A%25A8%25E6%259D%25A1%2f&amp;appkey=&amp;title=Angular%e6%89%8b%e5%86%99%e9%9f%b3%e9%87%8f%e6%bb%91%e5%8a%a8%e6%9d%a1" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+            
+        </p>
+
+        
+        <p class="copyright-item">
+            <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">本文采用 CC BY-NC 4.0 向公众进行授权，一旦点击此链接，表示您知晓并同意该协议。</a>
+        </p>
+        
+    </div>
+
+
+    <div class="post-tags">
+        
+        <section>
+            <i class="iconfont icon-icon-tag"></i>标签:
+            
+            <span class="tag"><a href="https://lovu.top/tags/angular/">
+                    #Angular</a></span>
+            
+            <span class="tag"><a href="https://lovu.top/tags/css/">
+                    #CSS</a></span>
+            
+            <span class="tag"><a href="https://lovu.top/tags/html/">
+                    #HTML</a></span>
+            
+            <span class="tag"><a href="https://lovu.top/tags/typescript/">
+                    #Typescript</a></span>
+            
+        </section>
+        
+        <section>
+            <a href="javascript:window.history.back();">返回</a></span> ·
+            <span><a href="https://lovu.top">首页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://lovu.top/2019/%E5%8A%A8%E5%BF%83%E5%BC%A6-%E4%B8%80/" class="prev" rel="prev" title="动心弦 一"><i
+                class="iconfont icon-dajiantou"></i>&nbsp;动心弦 一</a>
+        
+        
+    </div>
+
+    <div class="post-comment">
+        
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+        
+    </div>
+</article>
+      </div>
+    </main>
+    <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2012 - 2019</span>
+        
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://lovu.top">晗月</a> |
+        </span>
+        
+
+        <span>Crafted with ♥ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank"
+                rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank"
+                rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+  </div>
+</body>
+
+</html>

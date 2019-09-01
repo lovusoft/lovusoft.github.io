@@ -2,9 +2,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>https://lovu.top/tags/angular/</loc>
+      
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://lovu.top/2019/angular%E6%89%8B%E5%86%99%E9%9F%B3%E9%87%8F%E6%BB%91%E5%8A%A8%E6%9D%A1/</loc>
+      
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://lovu.top/categories/</loc>
       
-      <lastmod>2019-08-31T22:28:22+08:00</lastmod>
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://lovu.top/tags/css/</loc>
+      
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://lovu.top/tags/html/</loc>
+      
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -18,7 +74,7 @@
     <url>
       <loc>https://lovu.top/posts/</loc>
       
-      <lastmod>2019-08-31T22:28:22+08:00</lastmod>
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -32,7 +88,7 @@
     <url>
       <loc>https://lovu.top/tags/</loc>
       
-      <lastmod>2019-08-31T22:28:22+08:00</lastmod>
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -44,9 +100,9 @@
     </url>
   
     <url>
-      <loc>https://lovu.top/2019/%E5%8A%A8%E5%BF%83%E5%BC%A6-%E4%B8%80/</loc>
+      <loc>https://lovu.top/tags/typescript/</loc>
       
-      <lastmod>2019-08-31T22:28:22+08:00</lastmod>
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -59,6 +115,34 @@
   
     <url>
       <loc>https://lovu.top/</loc>
+      
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://lovu.top/categories/%E7%A0%81%E9%97%B4%E5%B0%8F%E8%AE%B0/</loc>
+      
+      <lastmod>2019-09-02T00:47:10+08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://lovu.top/2019/%E5%8A%A8%E5%BF%83%E5%BC%A6-%E4%B8%80/</loc>
       
       <lastmod>2019-08-31T22:28:22+08:00</lastmod>
       
@@ -143,20 +227,6 @@
   
     <url>
       <loc>https://lovu.top/2019/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-      
-      <lastmod>2019-08-26T21:09:14+08:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0.5</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://lovu.top/categories/%E7%A0%81%E9%97%B4%E5%B0%8F%E8%AE%B0/</loc>
       
       <lastmod>2019-08-26T21:09:14+08:00</lastmod>
       

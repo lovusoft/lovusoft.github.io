@@ -5,8 +5,72 @@
     <description>Recent content in 晗月一梦 on 晗月一梦</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sat, 31 Aug 2019 22:28:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2019 00:47:10 +0800</lastBuildDate>
     <atom:link href="https://lovu.top/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Angular手写音量滑动条</title>
+      <link>https://lovu.top/2019/angular%E6%89%8B%E5%86%99%E9%9F%B3%E9%87%8F%E6%BB%91%E5%8A%A8%E6%9D%A1/</link>
+      <pubDate>Mon, 02 Sep 2019 00:47:10 +0800</pubDate>
+      
+      <guid>https://lovu.top/2019/angular%E6%89%8B%E5%86%99%E9%9F%B3%E9%87%8F%E6%BB%91%E5%8A%A8%E6%9D%A1/</guid>
+      <description>
+
+&lt;h4 id=&#34;最终效果&#34;&gt;最终效果&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2019/09/02/kQR9LyftmZGUBDV.gif&#34; alt=&#34;最终效果演示.gif&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;html&#34;&gt;HTML:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;input type=&amp;quot;range&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;100&amp;quot; value=&amp;quot;30&amp;quot; [(ngModel)]=&amp;quot;sound&amp;quot; [ngStyle]=&amp;quot;{&#39;background-size&#39;: process}&amp;quot; /&amp;gt;
+&amp;lt;!--ngModel绑定当前数值到sound--&amp;gt;
+&amp;lt;!--ngStyle从ts获取当前滚动进度，设置对应的背景颜色--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;scss&#34;&gt;SCSS:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-scss&#34;&gt;  .sound {
+      white-space: nowrap;
+
+      input {
+        margin-left: 6px;
+
+        &amp;amp;[type=&amp;quot;range&amp;quot;] {
+          appearance: none;		//清除默认样式
+          background: linear-gradient(#d33a31, #d33a31) no-repeat, #f5f5f5;
+          //linear-gradient设置滑动进度前后颜色
+          height: 2px;
+          position: relative;
+          bottom: 8.5px;
+          border: none;
+            
+		  //设置滚动条上按钮样式
+          &amp;amp;::-webkit-slider-thumb {
+            appearance: none;
+            cursor: pointer;
+            position: relative;
+            box-sizing: border-box;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d33a31;
+          }
+
+        }
+      }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;typescript&#34;&gt;Typescript:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-typescript&#34;&gt;sound = 20; 
+//与Vue计算属性相似
+get process() {
+    return this.sound + &#39;% 100%&#39;;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>动心弦 一</title>
